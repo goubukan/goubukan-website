@@ -169,6 +169,25 @@
             background-color: #7ec69f;
         }
 
+        /* LINE ボタン */
+        .btn-line {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #00c300; /* LINE 緑 */
+            color: white;
+            padding: 10px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-line img { width: 20px; height: 20px; display: inline-block; }
+
+        /* Google Map ラップ（レスポンシブiframe） */
+        .map-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 12px; border-radius: 6px; }
+        .map-wrap iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+
         /* フッター */
         footer {
             background-color: #5fb383;
@@ -211,6 +230,9 @@
             main {
                 margin: 15px auto;
             }
+
+            .btn { padding: 10px 14px; }
+            .btn-line { padding: 10px 12px; }
         }
     </style>
 </head>
@@ -236,8 +258,8 @@
         <!-- 道場について -->
         <section id="about">
             <h2>道場について</h2>
-            <p>昭和３７年に仙台市に設立され、一貫して青少年の健やかな育ちに心を砕き、教程基準の設定など斬新な運営に取り組んでまいりました。</p>
-            <p>当道場では、空手を通じて心身の向上、礼儀正しさ、忍耐力などを養うことを目指しています。初心者から経験者まで、すべての方にご満足いただけるレッスンを提供しております。</p>
+            <p>昭和３７年に仙台市に設立され、一貫して青少年の健やかな育ちに心を砕き、教程基準の設定など斬新な運営に取り組んでまいりまし[...]
+            <p>当道場では、空手を通じて心身の向上、礼儀正しさ、忍耐力などを養うことを目指しています。初心者から経験者まで、すべての方に[...]
         </section>
 
         <!-- クラス紹介 -->
@@ -254,6 +276,7 @@
                 <h3>一般部</h3>
                 <p><strong>対象：高校生以上</strong></p>
                 <p>高校生から大人まで、幅広い年代の方が稽古できます。仕事や学校との両立も可能な時間帯でレッスンを行っております。</p>
+
             </div>
 
             <p style="margin-top: 15px; font-size: 13px; color: #666;">料金については<a href="pricing.html">料金ページ</a>をご覧ください。</p>
@@ -284,6 +307,15 @@
 
             <h3>アクセス</h3>
             <p>公共交通機関でのアクセスが便利です。詳しくはお問い合わせください。</p>
+
+            <!-- Google Maps 埋め込み（レスポンシブ） -->
+            <div class="map-wrap" aria-label="道場の地図">
+                <iframe
+                    src="https://maps.google.com/maps?q=%E3%80%92984-0052%20%E4%BB%99%E5%8F%B0%E5%B8%82%E8%8B%A5%E6%9E%97%E5%8C%BA%E9%80%A3%E5%9D%8A2%E4%B8%81%E7%9B%AE3-21&hl=ja&z=15&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="全日本剛柔流空手道連盟 総本部剛武舘 の地図"></iframe>
+            </div>
         </section>
 
         <!-- お問い合わせ -->
@@ -302,6 +334,17 @@
                 <p><a href="tel:02229945525" style="color: #5fb383; text-decoration: none;">０２２－２９９－４５２５</a></p>
             </div>
 
+            <!-- 公式LINE の案内 -->
+            <div class="info-box">
+                <h3>公式LINE</h3>
+                <p>公式LINEからもお問い合わせいただけます。下のボタンをタップしてください。</p>
+                <!-- TODO: 実際の短縮リンク（lin.ee）または page.line.me のURL に置き換えてください -->
+                <a id="lineLink" class="btn-line" href="https://lin.ee/XXXXXX" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/LINE_logo.svg" alt="LINEアイコン" aria-hidden="true">
+                    公式LINE
+                </a>
+            </div>
+
             <p style="margin-top: 20px; font-size: 14px;">体験レッスンも随時受け付けておりますので、まずはお気軽にお問い合わせください。</p>
         </section>
     </main>
@@ -311,5 +354,22 @@
         <p>&copy; 2024 全日本剛柔流空手道連盟 総本部剛武舘</p>
         <p>All rights reserved.</p>
     </footer>
+
+    <script>
+        // モバイルでアプリを優先して開く（存在する場合）
+        (function(){
+            var lineEl = document.getElementById('lineLink');
+            if(!lineEl) return;
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
+            // 実際のLINE ID を使う場合は line://ti/p/@yourid を設定しておくとアプリ優先で開けます。
+            var nativeScheme = 'line://ti/p/@your_line_id'; // 必要なら置き換えてください
+            // 現在は汎用リンクを使っているため、モバイル時のみ scheme を一時的に設定（ユーザーがLINEを持っていない場合の挙動に注意）
+            if(isMobile){
+                // ここは安全のためユーザーにアプリで開くかブラウザで開くかを選ばせるなどに変更可能
+                // lineEl.href = nativeScheme; // コメントアウト解除すると直接アプリを開く
+            }
+        })();
+    </script>
 </body>
 </html>
