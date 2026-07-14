@@ -3,73 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全日本剛柔流空手道連盟　総本部剛武舘</title>
+    <meta name="description" content="全日本剛柔流空手道連盟 総本部剛武舘。初心者から競技者まで、あらゆるレベルの方を対象とした空手道の稽古を行っています。">
+    <title>全日本剛柔流空手道連盟　総本部剛武舘 | 空手道稽古所</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <!-- ヘッダー -->
     <header class="header">
-        <div class="logo">全日本剛柔流空手道連盟　総本部剛武舘</div>
-        <div class="menu">MENU</div>
+        <div class="logo">剛武舘</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav class="nav" id="nav">
+            <a href="index.html">ホーム</a>
+            <a href="about.html">初めての方へ</a>
+            <a href="price.html">料金</a>
+            <a href="contact.html">お問い合わせ</a>
+        </nav>
     </header>
 
-    <!-- メインビジュアル -->
-    <section class="hero">
-        <img src="images/main.jpg" alt="メイン画像">
-        <h1>全日本剛柔流空手道連盟　総本部剛武舘へようこそ</h1>
-        <a href="about.html" class="btn-main">初めての方へ</a>
-        <a href="contact.html" class="btn-sub">お問い合わせ</a>
-    </section>
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>全日本剛柔流空手道連盟<br>総本部剛武舘へようこそ</h1>
+                <p>初心者から競技者まで、一緒に空手道の道を歩みましょう</p>
+                <div class="btn-group">
+                    <a href="about.html" class="btn btn-main">初めての方へ</a>
+                    <a href="contact.html" class="btn btn-sub">お問い合わせ</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- お知らせ -->
-    <section class="news">
-        <h2>お知らせ</h2>
-        <ul>
-            <li>
-                <span class="news-title">第６０回剛武舘東日本空手道選手県大会　2026宮城県硬式空手道選手権大会(仙台市宮城野体育館)</span>
-                <span class="news-date"> 2026.07.19</span>
-            </li>
-            <li>
-                <span class="news-title">新規入会受付中</span>
-                <span class="news-date">2026/07/14</span>
-            </li>
-        </ul>
-        <a href="news.html" class="link-more">もっと見る</a>
-    </section>
+        <!-- お知らせセクション -->
+        <section class="news">
+            <h2>お知らせ</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-title">第６０回剛武舘東日本空手道選手権大会 2026宮城県硬式空手道選手権大会</span>
+                    <span class="news-date">2026年7月19日 開催予定</span>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">会場：仙台市宮城野体育館</p>
+                </li>
+                <li class="news-item">
+                    <span class="news-title">新規入会受付中</span>
+                    <span class="news-date">2026年7月14日</span>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">随時、体験稽古のお申し込みを受け付けています。お気軽にお問い合わせください。</p>
+                </li>
+                <li class="news-item">
+                    <span class="news-title">夏季特別稽古開始</span>
+                    <span class="news-date">2026年7月中旬</span>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">集中稽古のプログラムを予定しています。</p>
+                </li>
+            </ul>
+            <a href="news.html" class="link-more">お知らせ一覧を見る →</a>
+        </section>
 
-    <!-- 入会ステップ -->
-    <section class="steps">
-        <h2>入会までの流れ</h2>
-        <div class="step-item">
-            <div class="step-number">1</div>
-            <p>お問い合わせ</p>
-        </div>
-        <div class="step-item">
-            <div class="step-number">2</div>
-            <p>見学・体験</p>
-        </div>
-        <div class="step-item">
-            <div class="step-number">3</div>
-            <p>入会手続き</p>
-        </div>
-    </section>
+        <!-- 入会ステップセクション -->
+        <section class="steps">
+            <h2>入会までの流れ</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <p>お問い合わせ</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">メールまたはLINEでご連絡ください</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <p>見学・体験</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">稽古を見学、または体験できます</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <p>入会手続き</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">申込書を提出いただきます</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <p>活動スタート</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">一緒に稽古を始めましょう</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="contact.html" class="btn btn-main">今すぐ問い合わせる</a>
+            </div>
+        </section>
 
-    <!-- アクセス -->
-    <section class="access">
-        <h2>アクセス</h2>
-        <img src="images/map.jpg" alt="地図">
-        <p>〒984-0052 仙台市若林区連坊2丁目3-21</p>
-    </section>
+        <!-- 活動紹介セクション -->
+        <section class="activities">
+            <h2>活動内容</h2>
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=基本稽古" alt="基本稽古">
+                    <div class="activity-info">
+                        <h3>基本稽古</h3>
+                        <p style="font-size: 0.9rem; color: #666;">型や組手の基本を丁寧に指導します。</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=組手稽古" alt="組手稽古">
+                    <div class="activity-info">
+                        <h3>組手稽古</h3>
+                        <p style="font-size: 0.9rem; color: #666;">実践的な組手技術を習得できます。</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=大会参加" alt="大会参加">
+                    <div class="activity-info">
+                        <h3>大会参加</h3>
+                        <p style="font-size: 0.9rem; color: #666;">各種大会への参加をサポートします。</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=段位取得" alt="段位取得">
+                    <div class="activity-info">
+                        <h3>段位取得</h3>
+                        <p style="font-size: 0.9rem; color: #666;">黒帯取得まで、継続的にサポート。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセスセクション -->
+        <section class="access">
+            <h2>アクセス</h2>
+            <div class="access-content">
+                <div class="access-map">
+                    <img src="https://via.placeholder.com/400x300?text=地図" alt="所在地地図">
+                </div>
+                <div class="access-info">
+                    <h3>所在地</h3>
+                    <p><strong>郵便番号：</strong><br>〒984-0052</p>
+                    <p><strong>住所：</strong><br>宮城県仙台市若林区連坊2丁目3-21</p>
+                    <p><strong>アクセス：</strong><br>地下鉄南北線「連坊」駅から徒歩5分</p>
+                    <p style="margin-top: 1.5rem;">
+                        <strong style="font-size: 1.1rem;">📞 お気軽にお問い合わせください</strong>
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <a href="contact.html" class="btn btn-main" style="display: inline-block;">コンタクト</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- フッター -->
     <footer class="footer">
-        <p>© 2026 全日本剛柔流空手道連盟　総本部剛武舘</p>
-        <div class="sns">
-            <a href="https://lin.ee/https://lin.ee/https://line.me/R/ti/p/@195xouaz">LINE公式</a>
+        <p>&copy; 2026 全日本剛柔流空手道連盟　総本部剛武舘</p>
+        <div class="footer-sns">
+            <a href="https://line.me/R/ti/p/@195xouaz" target="_blank">LINE公式</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="contact.html">お問い合わせ</a>
         </div>
     </footer>
 
+    <script>
+        // モバイルメニュー開閉
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // ナビゲーションリンク click時にメニューを閉じる
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

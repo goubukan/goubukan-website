@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="お問い合わせ。体験・見学・ご不明な点など、お気軽にお問い合わせください。">
+    <title>お問い合わせ | 全日本剛柔流空手道連盟　総本部剛武舘</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="logo">剛武舘</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav class="nav" id="nav">
+            <a href="index.html">ホーム</a>
+            <a href="about.html">初めての方へ</a>
+            <a href="price.html">料金</a>
+            <a href="contact.html">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ページタイトル -->
+        <div class="page-title">
+            <h1>お問い合わせ</h1>
+            <p>ご質問や体験のご希望はこちらから</p>
+        </div>
+
+        <!-- お問い合わせセクション -->
+        <section style="background-color: #fff;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2>ご連絡方法</h2>
+                <p style="margin-bottom: 2rem; color: #666; line-height: 1.8;">体験稽古のご希望、不明な点、その他のお問い合わせなど、下記の連絡先からお気軽にお問い合わせください。迅速にご返答いたします。</p>
+
+                <div style="background-color: #f0f7f0; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: #2e7d32; font-size: 1.3rem; margin-bottom: 1rem;">📱 LINE公式</h3>
+                    <p style="margin-bottom: 1rem; color: #666;">最も素早いご返答が可能です。お気軽にお友達登録ください。</p>
+                    <a href="https://line.me/R/ti/p/@195xouaz" target="_blank" class="btn btn-main" style="font-size: 1.1rem;">LINE公式ページへ</a>
+                </div>
+
+                <div style="background-color: #f0f7f0; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: #2e7d32; font-size: 1.3rem; margin-bottom: 1rem;">📧 メール</h3>
+                    <p style="margin-bottom: 1rem; color: #666;">お気軽にメールでお問い合わせください。</p>
+                    <p style="word-break: break-all; font-family: monospace; background-color: white; padding: 1rem; border-radius: 6px; color: #333;">
+                        info@goubukan.example.com
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #999;">※ 実装時にメールアドレスを設定してください</p>
+                </div>
+
+                <div style="background-color: #f0f7f0; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: #2e7d32; font-size: 1.3rem; margin-bottom: 1rem;">📍 所在地</h3>
+                    <p style="margin-bottom: 1rem; color: #666;">
+                        〒984-0052<br>
+                        宮城県仙台市若林区連坊2丁目3-21<br><br>
+                        <strong>地下鉄南北線「連坊」駅から徒歩5分</strong>
+                    </p>
+                </div>
+
+                <div style="background-color: #fff3cd; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #ff9800;">
+                    <h3 style="color: #e65100; margin-bottom: 0.5rem; font-size: 1.1rem;">⏰ 稽古時間</h3>
+                    <p style="margin: 0; color: #666; font-size: 0.95rem;">詳細な稽古予定はお問い合わせ時にご案内いたします。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>&copy; 2026 全日本剛柔流空手道連盟　総本部剛武舘</p>
+        <div class="footer-sns">
+            <a href="https://line.me/R/ti/p/@195xouaz" target="_blank">LINE公式</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+    </footer>
+
+    <script>
+        // モバイルメニュー開閉
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // ナビゲーションリンク click時にメニューを閉じる
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
