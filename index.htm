@@ -338,8 +338,8 @@
             <div class="info-box">
                 <h3>公式LINE</h3>
                 <p>公式LINEからもお問い合わせいただけます。下のボタンをタップしてください。</p>
-                <!-- TODO: 実際の短縮リンク（lin.ee）または page.line.me のURL に置き換えてください -->
-                <a id="lineLink" class="btn-line" href="https://lin.ee/XXXXXX" target="_blank" rel="noopener noreferrer">
+                <!-- LINEリンクをユーザー提供の短縮URLに更新 -->
+                <a id="lineLink" class="btn-line" href="https://lin.ee/https://line.me/R/ti/p/@195xouaz" target="_blank" rel="noopener noreferrer">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/LINE_logo.svg" alt="LINEアイコン" aria-hidden="true">
                     公式LINE
                 </a>
@@ -363,7 +363,7 @@
             var ua = navigator.userAgent || navigator.vendor || window.opera;
             var isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
             // 実際のLINE ID を使う場合は line://ti/p/@yourid を設定しておくとアプリ優先で開けます。
-            var nativeScheme = 'line://ti/p/@your_line_id'; // 必要なら置き換えてください
+            var nativeScheme = 'line://ti/p/@195xouaz'; // 実際のLINE IDに合わせて設定しました
             // 現在は汎用リンクを使っているため、モバイル時のみ scheme を一時的に設定（ユーザーがLINEを持っていない場合の挙動に注意）
             if(isMobile){
                 // ここは安全のためユーザーにアプリで開くかブラウザで開くかを選ばせるなどに変更可能
