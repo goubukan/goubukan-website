@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全日本剛柔流空手道連盟 総本部剛武舘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f9f7;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #7ec69f 0%, #a8d5ba 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* ナビゲーション */
+        nav {
+            background-color: #5fb383;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4a9b6f;
+        }
+
+        /* メインコンテンツ */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* セクション */
+        section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: #5fb383;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-left: 4px solid #a8d5ba;
+            padding-left: 10px;
+        }
+
+        section h3 {
+            color: #7ec69f;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* テキスト */
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            font-size: 15px;
+        }
+
+        /* リスト */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* 情報ボックス */
+        .info-box {
+            background-color: #f0f7f4;
+            border-left: 4px solid #a8d5ba;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .info-box strong {
+            color: #5fb383;
+        }
+
+        /* クラス情報 */
+        .class-item {
+            background-color: #f9fdfb;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #d4e8dd;
+        }
+
+        .class-item h3 {
+            margin-top: 0;
+        }
+
+        /* ボタン */
+        .btn {
+            display: inline-block;
+            background-color: #7ec69f;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #5fb383;
+        }
+
+        .btn-secondary {
+            background-color: #a8d5ba;
+        }
+
+        .btn-secondary:hover {
+            background-color: #7ec69f;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #5fb383;
+            color: white;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* アクセシビリティ */
+        a:focus, button:focus {
+            outline: 2px solid #7ec69f;
+            outline-offset: 2px;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 18px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 18px;
+            }
+
+            main {
+                margin: 15px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>全日本剛柔流空手道連盟</h1>
+        <p>総本部剛武舘</p>
+    </header>
+
+    <!-- ナビゲーション -->
+    <nav>
+        <ul>
+            <li><a href="#about">道場について</a></li>
+            <li><a href="#classes">クラス紹介</a></li>
+            <li><a href="#info">施設情報</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 道場について -->
+        <section id="about">
+            <h2>道場について</h2>
+            <p>昭和３７年に仙台市に設立され、一貫して青少年の健やかな育ちに心を砕き、教程基準の設定など斬新な運営に取り組んでまいりました。</p>
+            <p>当道場では、空手を通じて心身の向上、礼儀正しさ、忍耐力などを養うことを目指しています。初心者から経験者まで、すべての方にご満足いただけるレッスンを提供しております。</p>
+        </section>
+
+        <!-- クラス紹介 -->
+        <section id="classes">
+            <h2>クラス紹介</h2>
+            
+            <div class="class-item">
+                <h3>少年部</h3>
+                <p><strong>対象：4才以上</strong></p>
+                <p>小さなお子様から始められます。年齢や技術レベルに合わせた指導で、空手の基礎をしっかり習得できます。</p>
+            </div>
+
+            <div class="class-item">
+                <h3>一般部</h3>
+                <p><strong>対象：高校生以上</strong></p>
+                <p>高校生から大人まで、幅広い年代の方が稽古できます。仕事や学校との両立も可能な時間帯でレッスンを行っております。</p>
+            </div>
+
+            <p style="margin-top: 15px; font-size: 13px; color: #666;">料金については<a href="pricing.html">料金ページ</a>をご覧ください。</p>
+        </section>
+
+        <!-- 施設情報 -->
+        <section id="info">
+            <h2>施設情報</h2>
+            
+            <div class="info-box">
+                <h3>住所</h3>
+                <p>〒984-0052<br>仙台市若林区連坊2丁目3-21</p>
+            </div>
+
+            <div class="info-box">
+                <h3>電話番号</h3>
+                <p>０２２－２９９－４５２５</p>
+            </div>
+
+            <div class="info-box">
+                <h3>営業時間</h3>
+                <p>
+                    <strong>土曜日</strong><br>
+                    10:00～20:30
+                </p>
+                <p style="font-size: 13px; color: #666; margin-top: 10px;">※夏休み・冬休みの時間設定については、お問い合わせください。</p>
+            </div>
+
+            <h3>アクセス</h3>
+            <p>公共交通機関でのアクセスが便利です。詳しくはお問い合わせください。</p>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            
+            <p>ご質問や体験レッスンのご希望など、お気軽にお問い合わせください。</p>
+
+            <div class="info-box">
+                <h3>メールアドレス</h3>
+                <p><a href="mailto:knas0504@gmail.com" style="color: #5fb383; text-decoration: none;">knas0504@gmail.com</a></p>
+            </div>
+
+            <div class="info-box">
+                <h3>電話でのお問い合わせ</h3>
+                <p><a href="tel:02229945525" style="color: #5fb383; text-decoration: none;">０２２－２９９－４５２５</a></p>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 14px;">体験レッスンも随時受け付けておりますので、まずはお気軽にお問い合わせください。</p>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 全日本剛柔流空手道連盟 総本部剛武舘</p>
+        <p>All rights reserved.</p>
+    </footer>
+</body>
+</html>
