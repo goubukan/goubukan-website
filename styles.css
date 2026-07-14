@@ -1,0 +1,54 @@
+/* styles.css */
+:root{
+  --bg:#F6FFF6; /* 優しい緑の背景 */
+  --text:#05241A; /* 濃いテキスト */
+  --muted:#14532D;
+  --accent:#16A34A; /* 緑 */
+  --container:1100px;
+  --radius:12px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 1rem;
+}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;margin:.5rem;background:#fff;border-radius:6px}
+.site-header{background:transparent;position:sticky;top:0;z-index:20;backdrop-filter:saturate(120%) blur(6px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.logo{font-weight:800;text-decoration:none;color:var(--text);font-size:1.125rem}
+.nav a{margin-left:1rem;text-decoration:none;color:var(--muted)}
+.nav a.cta{padding:.5rem .75rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+.hero{padding:4rem 0}
+.hero-inner{display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.hero-content{flex:1 1 380px;min-width:280px}
+.hero h1{font-size:2rem;margin:0 0 .5rem 0}
+.lead{color:var(--muted);margin:0 0 1rem 0}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;text-decoration:none;border:1px solid transparent}
+.btn.primary{background:var(--accent);color:white}
+.btn.ghost{background:transparent;color:var(--text);border-color:rgba(5,36,26,.06)}
+.hero-visual{flex:0 0 320px;display:flex;align-items:center;justify-content:center}
+.card{background:white;padding:2rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,.06);text-align:center}
+.section{padding:3rem 0}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.site-footer{padding:2rem 0;border-top:1px solid rgba(2,6,23,.04);color:var(--muted);font-size:.9rem}
+.footer-inner{display:flex;align-items:center;justify-content:space-between}
+.features{list-style:disc;padding-left:1.2rem}
+
+/* モバイル調整 */
+@media (max-width:800px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-visual{width:100%}
+  .nav{display:flex;gap:.5rem}
+  .footer-inner{flex-direction:column;gap:.5rem}
+}
