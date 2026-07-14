@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>初めての方へ｜全日本剛柔流空手道連盟　総本部剛武舘</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">全日本剛柔流空手道連盟　総本部剛武舘</div>
+    <div class="menu">MENU</div>
+</header>
+
+<main>
+
+    <!-- ページタイトル -->
+    <section class="page-title">
+        <h1>初めての方へ</h1>
+        <p>入会までの流れ</p>
+    </section>
+ 
+    <!-- 入会までの流れ -->
+    <section class="steps">
+        <h2>入会までの流れ</h2>
+
+        <div class="step-item">
+            <span class="step-number">1</span>
+            <p>お問い合わせ（メール）</p>
+        </div>
+
+        <div class="step-item">
+            <span class="step-number">2</span>
+            <p>見学・体験（随時）</p>
+        </div>
+
+        <div class="step-item">
+            <span class="step-number">3</span>
+            <p>入会手続き（申込書の提出）</p>
+        </div>
+
+        <div class="step-item">
+            <span class="step-number">4</span>
+            <p>活動スタート！</p>
+        </div>
+
+        <a href="contact.html" class="btn-main">お問い合わせはこちら</a>
+    </section>
+
+    <!-- 料金案内 -->
+    <section class="price">
+        <h2>料金について</h2>
+        <p>料金や手続きの詳細は以下のページをご覧ください。</p>
+        <a href="price.html" class="btn-sub">料金・手続き案内を見る</a>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="faq">
+        <h2>よくある質問</h2>
+
+        <div class="faq-item">
+            <p class="faq-q">Q. 見学はできますか？</p>
+            <p class="faq-a">A. はい、いつでも可能です。稽古予定日をご案内しますので、あらかじめメールでご連絡いただけますと確実です。</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q">Q. 体験は有料ですか？</p>
+            <p class="faq-a">A. 無料でご参加いただけます。</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q">Q. 何歳から参加できますか？</p>
+            <p class="faq-a">A. ３歳からを目安としています。一人でお手洗いを使えることが望ましいです。お気軽にご相談ください。</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 全日本剛柔流空手道連盟　総本部剛武舘</p>
+    <div class="sns">
+        <a href="#">Instagram</a>
+        <a href="#">LINE</a>
+    </div>
+</footer>
+
+</body>
+</html>
