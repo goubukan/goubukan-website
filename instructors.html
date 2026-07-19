@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指導者紹介 | 全日本剛柔流空手道連盟 総本部剛武舘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f9f7;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #7ec69f 0%, #a8d5ba 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* ナビゲーション */
+        nav {
+            background-color: #5fb383;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4a9b6f;
+        }
+
+        /* メインコンテンツ */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* セクション */
+        section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: #5fb383;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-left: 4px solid #a8d5ba;
+            padding-left: 10px;
+        }
+
+        section h3 {
+            color: #7ec69f;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* テキスト */
+        p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* リスト */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* 情報ボックス */
+        .info-box {
+            background-color: #f0f7f4;
+            border-left: 4px solid #a8d5ba;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .info-box strong {
+            color: #5fb383;
+        }
+
+        /* 指導者カード */
+        .instructor-card {
+            background-color: #f9fdfb;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid #d4e8dd;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .instructor-card.featured {
+            border: 2px solid #7ec69f;
+            background: linear-gradient(135deg, #fafffe 0%, #f0f7f4 100%);
+        }
+
+        .instructor-card .instructor-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .instructor-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7ec69f 0%, #a8d5ba 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .instructor-card.featured .instructor-avatar {
+            width: 100px;
+            height: 100px;
+            font-size: 48px;
+        }
+
+        .instructor-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+
+        .instructor-card.featured .instructor-info h3 {
+            font-size: 20px;
+        }
+
+        .instructor-title {
+            color: #5fb383;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .instructor-card.featured .instructor-title {
+            font-size: 16px;
+        }
+
+        .instructor-rank {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .instructor-card.featured .instructor-rank {
+            color: #7ec69f;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .instructor-description {
+            margin-top: 10px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .instructor-card.featured .instructor-description {
+            font-size: 15px;
+        }
+
+        .instructor-history {
+            background-color: #f0f7f4;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .instructor-history strong {
+            color: #5fb383;
+        }
+
+        .instructor-history ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .instructor-history li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .instructor-specialties {
+            margin-top: 10px;
+        }
+
+        .instructor-specialties strong {
+            color: #5fb383;
+        }
+
+        .specialty-tag {
+            display: inline-block;
+            background-color: #e8f3ed;
+            color: #5fb383;
+            padding: 4px 10px;
+            border-radius: 15px;
+            margin-right: 8px;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        /* ボタン */
+        .btn {
+            display: inline-block;
+            background-color: #7ec69f;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #5fb383;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #5fb383;
+            color: white;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* アクセシビリティ */
+        a:focus, button:focus {
+            outline: 2px solid #7ec69f;
+            outline-offset: 2px;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 18px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 18px;
+            }
+
+            main {
+                margin: 15px auto;
+            }
+
+            .instructor-card {
+                padding: 15px;
+            }
+
+            .instructor-card .instructor-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .instructor-avatar {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .instructor-card.featured .instructor-avatar {
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+            }
+
+            .btn { padding: 10px 14px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>全日本剛柔流空手道連盟</h1>
+        <p>総本部剛武舘</p>
+    </header>
+
+    <!-- ナビゲーション -->
+    <nav>
+        <ul>
+            <li><a href="index.htm#about">道場について</a></li>
+            <li><a href="index.htm#classes">クラス紹介</a></li>
+            <li><a href="instructors.html">指導者紹介</a></li>
+            <li><a href="index.htm#info">施設情報</a></li>
+            <li><a href="index.htm#contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 指導者紹介 -->
+        <section>
+            <h2>指導者紹介</h2>
+            <p>剛武舘では、経験豊富で専門知識を持つ指導者が、各クラスで質の高い指導を行っています。初心者から上級者まで、すべての生徒が安心して稽古できる環境づくりに努めています。</p>
+
+            <!-- 館長 -->
+            <div class="instructor-card featured">
+                <div class="instructor-header">
+                    <div class="instructor-avatar">🥋</div>
+                    <div class="instructor-info">
+                        <h3>千葉　幸二郎</h3>
+                        <div class="instructor-title">総本部・剛武舘舘長</div>
+                        <div class="instructor-title">全日本剛柔流空手道連盟会長</div>
+                        <div class="instructor-rank">十段範士</div>
+                    </div>
+                </div>
+
+                <p class="instructor-description">日本剛柔流七代目宗家。五代目宗家の次男として３歳より空手道を学びました。全日本剛柔流大会優勝、全日本テコンドー大会優勝を初め大会入賞歴は20数回を数えます。</p>
+
+                <div class="instructor-history">
+                    <strong>主要な職歴：</strong>
+                    <ul>
+                        <li>元全日本硬式空手道連盟会長</li>
+                        <li>東北硬式空手道連盟名誉会長</li>
+                        <li>2000年（平成12年）剛武舘舘長就任</li>
+                        <li>2018年（平成30年）連盟会長就任</li>
+                    </ul>
+                </div>
+
+                <div class="instructor-specialties">
+                    <strong>専門分野・指導対象：</strong><br>
+                    <span class="specialty-tag">全体指導</span>
+                    <span class="specialty-tag">道場運営</span>
+                    <span class="specialty-tag">教程基準設定</span>
+                    <span class="specialty-tag">少年部・一般部</span>
+                    <span class="specialty-tag">連盟運営</span>
+                </div>
+            </div>
+
+            <!-- 情報ボックス -->
+            <div class="info-box">
+                <h3>指導者の資格について</h3>
+                <p>当道場の指導者は全員、全日本剛柔流空手道連盟の教程基準を遵守し、定期的な研修と指導力向上に取り組んでいます。生徒の安全と成長を最優先に、高い専門知識と指導技術を備えています。</p>
+            </div>
+
+            <a href="index.htm#contact" class="btn">体験入校についてお問い合わせ</a>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2026 全日本剛柔流空手道連盟 総本部剛武舘</p>
+        <p>All rights reserved.</p>
+    </footer>
+</body>
+</html>
