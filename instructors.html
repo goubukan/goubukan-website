@@ -156,21 +156,15 @@
         .instructor-avatar {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #7ec69f 0%, #a8d5ba 100%);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
+            display: block;
+            object-fit: cover;
             flex-shrink: 0;
         }
 
         .instructor-card.featured .instructor-avatar {
             width: 100px;
             height: 100px;
-            font-size: 48px;
         }
 
         .instructor-info h3 {
@@ -307,13 +301,11 @@
             .instructor-avatar {
                 width: 60px;
                 height: 60px;
-                font-size: 24px;
             }
 
             .instructor-card.featured .instructor-avatar {
                 width: 80px;
                 height: 80px;
-                font-size: 32px;
             }
 
             .btn { padding: 10px 14px; }
@@ -348,7 +340,7 @@
             <!-- 館長 -->
             <div class="instructor-card featured">
                 <div class="instructor-header">
-                    <div class="instructor-avatar">🥋</div>
+                    <img src="images/instructors/chiba.webp" alt="千葉　幸二郎 — 剛武舘舘長" class="instructor-avatar">
                     <div class="instructor-info">
                         <h3>千葉　幸二郎</h3>
                         <div class="instructor-title">総本部・剛武舘舘長</div>
